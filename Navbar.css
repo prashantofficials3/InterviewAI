@@ -1,0 +1,130 @@
+body {
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 2%;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logoImage {
+  width: 25%;
+  height: auto;
+  cursor: pointer;
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+
+}
+
+/* Navbar.css */
+
+.nav-link a {
+  text-decoration: none;
+  color: #011627;
+  font-weight: 500;
+  font-size: 24px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.nav-link a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  /* Initially, set the width to 0 to hide the border */
+  height: 3px;
+  /* Adjust the border thickness as needed */
+  background: blue;
+  /* Color of the border */
+  transition: width 0.3s ease;
+  /* Add a transition for smooth movement */
+}
+
+.nav-link a:hover::after {
+  width: 100%;
+  /* Expand the width to create the bottom border on hover */
+}
+
+
+/* Navbar.css */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+    /* Adjust padding for mobile */
+    box-shadow: none;
+  }
+
+  .logoImage {
+    width: 60%;
+    /* Adjust the logoImage size for mobile */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    height: 78vh;
+    position: absolute;
+    background-color: transparent;
+    top: 60px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 1;
+    text-align: center;
+    padding: 5%;
+    margin-top: 7%;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .toggle-bar {
+    width: 30px;
+    height: 3px;
+    background-color: #0251ff;
+    margin: 4px 10px;
+    transition: 0.4s;
+  }
+
+  .nav-link a {
+    font-size: 32px;
+    background: none;
+    font-weight: 600;
+    color: #011627;
+    text-shadow: 2px 2px 4px rgba(45, 87, 212, 0.5);
+  }
+}
+
+@media (orientation : landscape) {
+  .logoImage2 {
+    width: 50%;
+  }
+}

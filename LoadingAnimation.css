@@ -1,0 +1,28 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: blanchedalmond; */
+  }
+  
+  .loading-dot {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .loading-container {
+      height: 70vh;
+    }
+  
+    .loading-dot {
+      width: 60px;
+      height: 60px;
+      margin-top: 35%;
+    }
+  }
+
+  /* '#FF9F1C', '#011627', '#E71D36' */
